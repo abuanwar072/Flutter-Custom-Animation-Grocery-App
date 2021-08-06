@@ -1,4 +1,5 @@
 import 'package:animation_2/components/price.dart';
+import 'package:animation_2/models/ProductItem.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';

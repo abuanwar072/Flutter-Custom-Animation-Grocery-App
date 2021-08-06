@@ -1,4 +1,5 @@
 import 'package:animation_2/models/Product.dart';
+import 'package:animation_2/models/ProductItem.dart';
 import 'package:flutter/material.dart';
 
 enum HomeState { normal, details, cart }
@@ -34,17 +35,3 @@ class HomeBLoC with ChangeNotifier {
       0, (previousValue, element) => previousValue + element.quantity);
 }
 
-class ProductItem {
-  int quantity;
-  final Product? product;
-
-  ProductItem({this.quantity = 1, required this.product});
-
-  void increment() {
-    quantity++;
-  }
-
-  void add() {}
-
-  void substract() {}
-}

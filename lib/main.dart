@@ -15,14 +15,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-          primarySwatch: Colors.blue,
-          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
-          elevatedButtonTheme: ElevatedButtonThemeData(
-              style: TextButton.styleFrom(
+        primarySwatch: Colors.blue,
+        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: TextButton.styleFrom(
             padding: EdgeInsets.all(defaultPadding * 0.75),
             shape: StadiumBorder(),
             backgroundColor: primaryColor,
-          ))),
+          ),
+        ),
+      ),
       home: HomeScreen(),
     );
   }

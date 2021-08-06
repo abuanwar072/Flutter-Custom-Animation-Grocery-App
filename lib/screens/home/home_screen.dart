@@ -1,4 +1,3 @@
-import 'package:animation_2/components/price.dart';
 import 'package:animation_2/constants.dart';
 import 'package:animation_2/models/Product.dart';
 import 'package:animation_2/screens/deatils/details_screen.dart';

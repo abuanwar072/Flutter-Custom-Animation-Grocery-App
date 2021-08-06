@@ -114,10 +114,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
         style: TextStyle(color: Colors.black),
       ),
       actions: [
-        FavBtn(
-          radius: 20,
-        ),
-        SizedBox(width: defaultPadding)
+        FavBtn(radius: 20),
+        SizedBox(width: defaultPadding),
       ],
     );
   }
