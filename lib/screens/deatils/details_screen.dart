@@ -7,42 +7,18 @@ import 'package:flutter/material.dart';
 import 'components/cart_counter.dart';
 
 class DetailsScreen extends StatefulWidget {
-  const DetailsScreen(
-      {Key? key, required this.product, required this.onProductAdd})
-      : super(key: key);
+  const DetailsScreen({Key? key, required this.product}) : super(key: key);
 
   final Product product;
-  final VoidCallback onProductAdd;
 
   @override
   _DetailsScreenState createState() => _DetailsScreenState();
 }
 
 class _DetailsScreenState extends State<DetailsScreen> {
-  String _cartTag = "";
-  void _addToCart(BuildContext context) {
-    widget.onProductAdd();
-    setState(() {
-      _cartTag = "_cart";
-    });
-    Navigator.pop(context);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
-          child: SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(
-              child: Text("Add to cart"),
-              onPressed: () => _addToCart(context),
-            ),
-          ),
-        ),
-      ),
       backgroundColor: Colors.white,
       appBar: buildAppBar(),
       body: Column(
@@ -56,10 +32,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 Container(
                   width: double.infinity,
                   color: Color(0xFFF8F8F8),
-                  child: Hero(
-                    tag: widget.product.title! + _cartTag,
-                    child: Image.asset(widget.product.image!),
-                  ),
+                  child: Image.asset(widget.product.image!),
                 ),
                 Positioned(
                   bottom: -20,
