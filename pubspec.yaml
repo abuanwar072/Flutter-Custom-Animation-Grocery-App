@@ -29,7 +29,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^0.22.0
   google_fonts: ^2.1.0
-  get: ^4.3.4
+  # get: ^4.3.4 we don't need it
 
 dev_dependencies:
   flutter_test:
